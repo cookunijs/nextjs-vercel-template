@@ -13,17 +13,13 @@ $ yarn dev
 ## デプロイ
 ※ Vercelを使うためにアカウントの設定が必要になります
 
-- Step1
-### フォルダ名の変更
+- Step1 フォルダ名の変更
 nextjs-vercel-templateのフォルダ名を独自のものに変更
 
-- Step2
-### Vercelに登録
+- Step2 Vercelに登録
 <a href="https://vercel.com/signup">Signupページ</a>
 
-- Step3
-### vercelの設定
-
+- Step3 Vercelの設定
 vercelの実行。
 ```
 npx vercel
