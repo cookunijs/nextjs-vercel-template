@@ -60,6 +60,20 @@ What’s your project’s name?
 ? Want to override the settings? [y/N]
 ```
 
+
+- 2回目以降のデプロイ
+
+Prod環境へのデプロイ
+```
+yarn deploy:prod
+```
+
+Dev環境へのデプロイ
+```
+yarn deploy:dev
+```
+
+
 - 参考
 <a href="https://vercel.com/docs/cli#commands">Vercel CLI Commands DOCS</a>
 
