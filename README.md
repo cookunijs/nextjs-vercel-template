@@ -14,12 +14,17 @@ $ yarn dev
 ※ Vercelを使うためにアカウントの設定が必要になります
 
 - Step1 フォルダ名の変更
+
 nextjs-vercel-templateのフォルダ名を独自のものに変更
 
+
 - Step2 Vercelに登録
+
 <a href="https://vercel.com/signup">Signupページ</a>
 
+
 - Step3 Vercelの設定
+
 vercelの実行。
 ```
 npx vercel
@@ -57,6 +62,7 @@ What’s your project’s name?
 
 - 参考
 <a href="https://vercel.com/docs/cli#commands">Vercel CLI Commands DOCS</a>
+
 
 
 ## 設計思想
