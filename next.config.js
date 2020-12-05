@@ -1,3 +1,4 @@
+const path = require("path")
 const nextConfig = {
   env: {
     APP_ENV: process.env.APP_ENV,
@@ -8,6 +9,10 @@ const nextConfig = {
     domains: ['storage.googleapis.com', 'firebasestorage.googleapis.com'],
   },
   poweredByHeader: false,
+  webpack(config, options) {
+    config.resolve.alias['@'] = path.join(__dirname, 'src')
+    return config
+  },
 }
 
 module.exports = nextConfig
