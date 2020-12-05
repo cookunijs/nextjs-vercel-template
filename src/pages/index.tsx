@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
-import { App } from '../components/templates/App'
+import { App } from '@components/templates/App'
 
 type Props = {
   sampleValue?: string
