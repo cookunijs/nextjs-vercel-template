@@ -5,10 +5,14 @@
 $ yarn
 ```
 
+<br/>
+
 ## ローカルでの起動
 ```
 $ yarn dev
 ```
+
+<br/>
 
 ## デプロイ
 ※ Vercelを使うためにアカウントの設定が必要になります
@@ -77,7 +81,7 @@ yarn deploy:dev
 - 参考
 <a href="https://vercel.com/docs/cli#commands">Vercel CLI Commands DOCS</a>
 
-
+<br/>
 
 ## 設計思想
 - Next.jsを使っている理由
@@ -87,3 +91,55 @@ yarn deploy:dev
   - Next.jsのデフォルトのサーバーサイドの仕組みだと、ルーティングを上書きして使いたいときにできないから
   - 例えば `/ogimage` みたいなパスでOGImageを返したいときに、Next.jsではページを返さないといけないので実現できない（と思う）
     - 無理にやろうとすると `/api/ogimage` でやればいいんだけど、個人的にはこれはapiではないんだよなあみたいなモヤモヤが生まれる
+- SCSSを使っている理由
+  - SCSSが使えればCSSよりコードの記述量も減り、時間短縮もでき、管理もしやすくなるため。
+
+<br/>
+
+## フォルダ構成
+### src
+- components
+pagesに実装するcomponentファイルを格納する。
+atomicデザインの構成要素毎にフォルダ分けをしている。
+
+- stories
+storybook用のファイルを格納する。
+componentsのフォルダ構成に合わせてフォルダ分けをしている。
+
+- styles
+componentのstyleを指定する`.scss`ファイルを格納する。
+
+- pages
+page用のファイルを格納する。
+
+- lib
+ライブラリとしてcomponentから切り離されている機能ファイルを格納する。
+
+```
+  src
+  ├── components
+  │   ├── atoms/
+  │   ├── molecules/
+  │   ├── organisms/
+  │   └── templates/
+  ├── stories
+  │   ├── atoms/
+  │   ├── molecules/
+  │   ├── organisms/
+  │   └── templates/
+  ├── styles
+  │   ├── components
+  │   │   ├── atoms/
+  │   │   ├── molecules/
+  │   │   ├── organisms/
+  │   │   └── templates/
+  │   └── global.scss
+  ├── pages
+  │   ├── api/
+  │   ├── _app.tsx
+  │   ├── index.ts
+  │   └── 404.ts
+  └── lib
+      ├── client.ts
+      └── server.ts
+```
