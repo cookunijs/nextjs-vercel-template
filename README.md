@@ -5,14 +5,12 @@
 $ yarn
 ```
 
-<br/>
 
 ## ローカルでの起動
 ```
 $ yarn dev
 ```
 
-<br/>
 
 ## デプロイ
 ※ Vercelを使うためにアカウントの設定が必要になります
@@ -94,26 +92,34 @@ yarn deploy:dev
 - SCSSを使っている理由
   - SCSSが使えればCSSよりコードの記述量も減り、時間短縮もでき、管理もしやすくなるため。
 
-<br/>
 
 ## フォルダ構成
 ### src
 - components
+
 pagesに実装するcomponentファイルを格納する。
 atomicデザインの構成要素毎にフォルダ分けをしている。
 
+
 - stories
+
 storybook用のファイルを格納する。
 componentsのフォルダ構成に合わせてフォルダ分けをしている。
 
+
 - styles
+
 componentのstyleを指定する`.scss`ファイルを格納する。
 
+
 - pages
+
 page用のファイルを格納する。
+
 
 - lib
 ライブラリとしてcomponentから切り離されている機能ファイルを格納する。
+
 
 ```
   src
